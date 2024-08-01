@@ -3,21 +3,31 @@ function drawThumbnail() {
     const ctx = canvas.getContext('2d');
     const bgColor = document.getElementById('backgroundColor').value;
     const txtColor = document.getElementById('textColor').value;
-    const text = document.getElementById('text').value;
+    const text1 = document.getElementById('sub-title').value;
+    const text2 = document.getElementById('main-title').value;
     const emoji = document.getElementById('emoji').value;
 
     // Set background color
     ctx.fillStyle = bgColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Set text color and draw text
-    ctx.font = '30px Arial';
-    ctx.fillStyle = txtColor;  // Apply text color from txtColor
-    ctx.fillText(text, canvas.width / 3, 100);
+    // Draw sub-title text at the top left
+    ctx.font = '40px Arial';
+    ctx.fillStyle = txtColor;
+    ctx.textAlign = 'left';
+    ctx.fillText(text1, 20, 50); // Adjusted position to 20 pixels from left, 50 pixels from top
 
-    // Set text color for emoji and draw emoji
-    ctx.fillText(emoji, 20, 100);
+    // Draw main-title text centered
+    ctx.font = '80px Arial';
+    ctx.fillStyle = txtColor;
+    ctx.textAlign = 'center';
+    ctx.fillText(text2, canvas.width / 2, canvas.height / 2 + 20); // Centered horizontally, adjust vertically as needed
+
+    // Draw emoji at the left middle
+    ctx.font = '80px Arial';  // Adjust the emoji size if needed
+    ctx.fillText(emoji, 40, canvas.height / 2+20);  // Position emoji on the left, halfway down the canvas
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const backgroundColorInput = document.getElementById('backgroundColor');
