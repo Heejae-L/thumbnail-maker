@@ -8,15 +8,18 @@
 <body>
     <h1>블로그 썸네일 생성기</h1>
     <div class="input-group">
-        <div class="tooltip">
+        <div class="form-field">
+            <input type="file" id="imageUpload" accept="image/*" title="배경 이미지 업로드">
+        </div>
+        <div class="tooltip form-field">
             <input type="color" id="backgroundColor" value="#ffffff">
             <span class="tooltiptext">배경 색상 선택</span>
         </div>
-        <div class="tooltip">
+        <div class="tooltip form-field">
             <input type="color" id="textColor" value="#000000">
             <span class="tooltiptext">텍스트 색상 선택</span>
         </div>
-        <div>
+        <div class="form-field">
             <select id="emoji" title="이모지 선택">
                 <option value="😀">😀</option>
                 <option value="🚀">🚀</option>
@@ -24,10 +27,10 @@
                 <option value="📚">📚</option>
             </select>
         </div>
-        <div>
-            <input type="text" id="sub-title" placeholder="카테고리 입력" title="카테고리 입력">
+        <div class="form-field">
+            <input type="text" id="sub-title" placeholder="대주제 입력" title="대주제 입력">
         </div>
-        <div>
+        <div class="form-field">
             <input type="text" id="main-title" placeholder="제목 입력" title="제목 입력">
         </div>
     </div>
@@ -36,7 +39,6 @@
         <button id="download">다운로드</button>
     </div>
     <canvas id="canvas" width="768" height="402"></canvas>
-
     <script src="script.js"></script>
 </body>
 </html>
