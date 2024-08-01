@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>블로그 썸네일 생성기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>블로그 썸네일 생성기</h1>
+    <div class="input-group">
+        <div>
+            <h4>배경 색상 선택</h4>
+            <input type="color" id="backgroundColor" value="#ffffff" title="배경 색상 선택">
+        </div>
+        <div>
+            <h4>텍스트 색상 선택</h4>
+            <input type="color" id="textColor" value="#000000" title="텍스트 색상 선택">
+        </div>
+        <div>
+            <h4>이모지 선택</h4>
+            <select id="emoji" title="이모지 선택">
+                <option value="😀">😀</option>
+                <option value="🚀">🚀</option>
+                <option value="🌟">🌟</option>
+                <option value="📚">📚</option>
+            </select>
+        </div>
+        <div>
+            <h4>텍스트 입력</h4>
+            <input type="text" id="text" placeholder="텍스트 입력" title="텍스트 입력">
+        </div>
+    </div>
+    <div class = "submit-group">
+        <button onclick="drawThumbnail()">생성</button>
+        <button id="download">다운로드</button>
+    </div>
+    <canvas id="canvas" width="400" height="200"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>

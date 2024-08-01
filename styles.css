@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input, select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+canvas {
+    border: 1px solid black;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-around; /* 각 요소를 공간에 맞게 균등하게 분배 */
+    align-items: center; /* 요소들을 세로 방향 중앙에 위치 */
+    flex-wrap: wrap; /* 너비가 부족하면 다음 줄로 내려가도록 설정 */
+    margin-bottom: 20px; /* 캔버스와의 간격 조정 */
+}
+
+.input-group > div {
+    margin: 10px; /* 각 요소들 사이의 간격을 설정 */
+}
+
